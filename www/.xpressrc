@@ -1,0 +1,23 @@
+nav: !!omap
+  - Home: {
+        type: 63,
+        address: /
+    }
+  - Blog: {
+        type: 63,
+        address: /blog
+    }
+  - Document: {
+        type: 63,
+        address: /doc
+    }
+  - Source: {
+        type: 63,
+        address: /source
+    }
+  - Help: {
+        type: 63,
+        address: /help
+    }
+
+copyright: "&copy XIT STUDIO"

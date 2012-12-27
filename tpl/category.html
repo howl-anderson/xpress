@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<title><+TITLE+></title>
+<meta name="generator" content="vim" />
+<meta charset="UTF-8" />
+<meta name="author" content="howl" />
+<link href="/css/bootstrap.css" rel="stylesheet">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<!--link href="css/application.css" rel="stylesheet"-->
+<!--style type="text/css">
+body {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+</style>
+<link href="../assets/css/bootstrap-responsive.css" rel="stylesheet"-->
+<!--script src="js/bootstrap.js"></script-->
+<!--script src="js/application.js"></script-->
+</head>
+<body style="margin:0 auto; width:940px;" class="row"> 
+<div class="navbar">
+  <div class="navbar-inner">
+    <!--a class="brand" href="#">Title</a-->
+    <ul class="nav">
+      {% for key, value in config.nav %}
+      <li><a href="{{ value.address }}">{{ key }}</a></li>
+      {% endfor %}
+    </ul>
+    <ul class="nav" style="float:right;">
+      <li id="nav-search-setting">
+      <form action="" class="navbar-form pull-right" method="post">
+        <input type="" class="search-query" value="" name="" />
+        <button type="submit" class="btn">搜索</button>
+      </form>
+      </li>
+      <li id="nav-rss"><a href="/register">RSS</a></li>
+    </ul>
+  </div>
+</div>
+{{ hero_unit }}
+<div>
+  <table class="table">
+    {% for item in index %}
+    <tr>
+      <td>
+        <div>
+            <div>
+              <big><a href="{{ item.url }}">{{ item.title }}</a></big>
+            </div>
+            <div>
+              <span>posted on：2222-11-00
+              </span>
+              <span>
+              category: default
+              </span>
+              <span>
+              hot:
+              </span>
+            </div>
+            <div>
+            {{ item.summary}}
+            </div>
+        </div>
+      </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+<div>
+  <ul class="pager">
+  <li class="previous {% if not next_page_flag %}disabled{% endif %}">
+  <a href="{% if next_page_flag %}?page={{ next_page }}{% else %}javascript:void(0);{% endif %}">&larr; Older</a>
+  </li>
+  <li class="next {% if not pre_page_flag %}disabled{% endif %}">
+  <a href="{% if pre_page_flag %}?page={{ pre_page }}{% else %}javascript:void(0);{% endif %}">Newer &rarr;</a>
+  </li>
+  </ul>
+</div>
+<div>
+  <!--<ul class="unstyled" style="display:block; margin:100px auto 0; width:160px;">-->
+    <!--<li style="display:inline;"><a href="/about">关于</a></li>-->
+    <!--<li style="display:inline;"><a href="/hot">风云榜</a></li>-->
+    <!--<li style="display:inline;"><a href="/rank">封神榜</a></li>-->
+    <!--<li style="display:inline;"><a href="/api">API</a></li>-->
+  <!--</ul>-->
+  <ul class="unstyled" style="display:block; margin:10px auto 0; width:110px;">
+    <li style="display:inline;">{{ config.copyright }}</li>
+  </ul>
+</div>
+</body>
+</html>

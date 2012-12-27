@@ -1,0 +1,2 @@
+* xpress's code is ugly
+* xpress's request info  should decode so it can support unicode url and so on
