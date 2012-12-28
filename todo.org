@@ -1,2 +1,13 @@
-* xpress's code is ugly
-* xpress's request info  should decode so it can support unicode url and so on
+* version 1
+** Xpress's code is ugly so get sometime to rewrite it
+** Xpress's should support unicode url or some special character
+** Xpress's UI is ugly too, do some work on it
+* version 2
+** Let's make some local vim/emacs plugins/add-ons for Xpress
+** Make some server script for cron job or other type job for Xpress too if any
+* version 3
+** Is time to think the plugin for Xpress system
+* version 4
+** Make a web-based editor interface for portable usage, must like vi/emacs
+* version 5
+** Good job! nothing need to do now
